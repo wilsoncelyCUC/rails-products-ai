@@ -1,0 +1,14 @@
+<div class="container chatbot">
+  <h1>Chat with us</h1>
+  <div id="questions">
+  <!-- This renders the _question.html.erb partial for each question in @questions -->
+  <!-- It's equivalent to:
+        @questions.each do |question|
+          render partial: "question", locals: { question: question }
+        end
+   -->
+    <%= render @questions %>
+  </div>
+
+  <%= render "form", question: @question %>
+</div>

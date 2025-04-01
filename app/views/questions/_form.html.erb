@@ -1,0 +1,31 @@
+<%# app/views/questions/_form.html.erb %>
+
+<%# simple_form_for creates a form specifically for the question object %>
+<%= simple_form_for question, html: {
+ data: {
+   # Links this form to a Stimulus controller named "reset-form"
+   controller: "reset-form",
+   # When form submission completes (turbo:submit-end),
+   # call the reset() method in reset-form controller
+   action: "turbo:submit-end->reset-form#reset"
+ }
+} do |f| %>
+ <%# Bootstrap input group for styling the form elements together %>
+ <div class="input-group mb-3 w-100">
+   <%# Bootstrap floating label container %>
+   <div class="form-floating">
+     <%# Text input field for the question
+         - label: false removes SimpleForm's label
+         - wrapper: false removes SimpleForm's default wrapper div %>
+     <%= f.input :user_question, label: false, wrapper: false %>
+
+     <%# Floating label that appears above input when focused %>
+     <%= f.label :user_question, "Your question" %>
+   </div>
+
+   <%# Submit button styled with Bootstrap %>
+   <%= f.submit "Ask",
+       id: "new-question-button",
+       class: "btn btn-primary" %>
+ </div>
+<% end %>

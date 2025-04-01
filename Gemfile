@@ -13,7 +13,7 @@ gem "sprockets-rails"
 gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma", "~> 6.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -25,7 +25,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+#gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -78,3 +78,21 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+# OpenAI API wrapper for Ruby - interact with GPT and other OpenAI services
+gem "ruby-openai"
+
+#Quick Turbo Streams setup
+# ActionCable enhancements following SOLID principles for Rails
+gem "solid_cable"
+
+# [Active Job Backend] Solid Queue is a modern, multi-purpose background job system
+# for Ruby apps that uses Postgres as its storage backend. It's simpler to set up
+# than Sidekiq/Redis and integrates well with Rails' Active Job framework
+gem "solid_queue"
+
+# [Vector Search ORM] Neighbor integrates with pgvector to let you store and
+# search vector embeddings in your Rails app using Postgres. It adds vector
+# search capabilities to your ActiveRecord models and makes it easy to work
+# with embeddings from services like OpenAI
+gem 'neighbor'

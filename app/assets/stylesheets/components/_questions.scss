@@ -1,0 +1,65 @@
+.chatbot {
+  /* Main container styles */
+  background: white;
+  margin-top: 9px;
+  height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  h1 {
+    /* Header styles */
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+
+  #questions {
+    /* Messages container styles */
+    height: 100%;
+    overflow: scroll;
+    padding: 1rem;
+  }
+
+  .question {
+    /* Individual Q&A container */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Shared styles for both question and answer bubbles */
+  .user-question,
+  .ai-answer {
+    /* Message bubble styling */
+    border-radius: 1rem;              /* Rounded corners for chat bubbles */
+    margin-bottom: 1rem;              /* Space between messages */
+    padding: 0.5rem;                  /* Inner spacing */
+    max-width: 70%;                   /* Prevents bubbles from being too wide */
+    width: fit-content;               /* Bubble width fits to content */
+    word-wrap: break-word;            /* Handles long words/URLs */
+  }
+
+  .user-question {
+    /* User message specific styles */
+    align-self: flex-start;           /* Aligns user messages to left */
+    background: $blue;                /* Blue background for user messages */
+    color: $light-gray;               /* Light text color for readability */
+  }
+
+  .ai-answer {
+    /* AI message specific styles */
+    align-self: flex-end;             /* Aligns AI messages to right */
+    background: $gray-200;            /* Gray background for AI messages */
+  }
+
+  /* Form styles at bottom of chat */
+  #new_question {
+    border-top: 1px solid $gray-200;  /* Separator line above form */
+    padding: 1rem;                    /* Space around form */
+
+    .form-group {
+      margin-bottom: 0;               /* Removes extra space below form */
+    }
+  }
+ }

@@ -1,0 +1,15 @@
+<div id="<%= dom_id(question) %>" class="question">
+  <!-- Generate a unique DOM ID for each question (e.g., "question_1") -->
+  <!-- This unique ID helps Turbo target specific questions for updates -->
+
+  <!-- Subscribe to real-time updates for this specific question -->
+  <!-- When the AI answer is ready, Turbo will automatically update this element -->
+  <%= turbo_stream_from dom_id(question) %>
+
+   <!-- Display the user's question -->
+  <p class="user-question"><%= question.user_question %></p>
+
+  <!-- Display the AI answer or "..." if the answer isn't ready yet -->
+  <!-- The || operator means: show question.ai_answer if it exists, otherwise show "..." -->
+  <p class="ai-answer"><%= question.ai_answer || "..." %></p>
+</div>
