@@ -60,7 +60,7 @@ class ChatbotJob < ApplicationJob
     5. If the exact product is found, respond with: 'Yes, we have [Product Name] for $[Exact Price]. [Description]'
     6. If the exact product is not found, respond with: 'I apologize, but I can only provide information about specific products in our inventory, and I don't see that exact item listed.'
 
-    Available Products:\n"
+    Available Products :\n"
 
     nearest_products = get_nearest_products
 
