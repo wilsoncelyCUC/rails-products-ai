@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# tech stack lewagon
+
+- Ruby on Rails for the backend
+
+- ERB + HTML/JS for the frontend
+
+- PostgreSQL as the database
+
+- Separate environments for development, test, and production
+
+- Bootstrap 5.2 for styling
+
+- Devise for authentication
+
+- Elasticsearch (via elasticsearch-model and elasticsearch-rails) for search
+
+- dotenv for environment variable management
+
+- Simple Form for forms
+
+- SassC and Autoprefixer for CSS preprocessing
+
+- Font Awesome for icons
+
+- Unit tests using Rails' default test framework (test_unit)
+
+- Heroku-compatible configuration

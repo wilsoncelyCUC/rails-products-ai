@@ -96,3 +96,12 @@ gem "solid_queue"
 # search capabilities to your ActiveRecord models and makes it easy to work
 # with embeddings from services like OpenAI
 gem 'neighbor'
+
+
+# GitHub API integration
+gem 'octokit'
+# For HTTP requests (LinkedIn and other sources)
+gem 'httparty'
+# For NLP and text processing
+gem 'pragmatic_segmenter'
+gem 'pragmatic_tokenizer'
